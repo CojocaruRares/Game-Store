@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        Add Client
+    </title>
+</head>
+
+<body>
+    <a href="VideoGames"><button class="tablink">Video Games</button></a>
+    <a href="Categories"><button class="tablink">Categories</button></a>
+    <a href="Developers"><button class="tablink">Developers</button></a>
+    <a href="Clients"><button class="tablink">Clients</button></a>  
+    <a href="Transactions"><button class="tablink">Transactions</button></a>
+    
+
+    <br><br><br><br><br><br><br><br>
+    <div class="center">
+    <form action="/addClient" method="POST">
+    <label for="f_name" class="inputData">First Name:</label>
+    <input style="font-size: 110%" type="text" id="f_name" name="f_name" pattern="^[a-zA-Z]+$" required>
+    <br><br><br>
+    <label for="l_name" class="inputData">Last Name:</label>
+    <input style="font-size: 110%" type="text" id="l_name" name="l_name" pattern="^[A-Za-z]+$">
+    <br><br><br>
+    <label for="email" class="inputData">Email Address:</label>
+    <input style="font-size: 110%" type="text" id="email" name="email"  required>
+    <br><br><br>
+    <label for="phone" class="inputData">Phone Number:</label>
+    <input style="font-size: 110%" type="text" id="phone" name="phone">
+    <br><br><br>
+    <label for="wallet" class="inputData">Wallet:</label>
+    <input style="font-size: 110%" type="number" id="wallet" name="wallet" required>
+    <br><br><br>
+    <button style="font-size: 120%; color:black;" type="submit">Add client</button>
+  </form>
+    </div>
+    
+<br><br><br>
+</body>
+</html>

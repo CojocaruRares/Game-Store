@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        Add Category
+    </title>
+</head>
+
+<body>
+    <a href="VideoGames"><button class="tablink">Video Games</button></a>
+    <a href="Categories"><button class="tablink">Categories</button></a>
+    <a href="Developers"><button class="tablink">Developers</button></a>
+    <a href="Clients"><button class="tablink">Clients</button></a>  
+    <a href="Transactions"><button class="tablink">Transactions</button></a>
+    
+
+    <br><br><br><br><br><br><br><br>
+    <div class="center">
+    <form action="/addCategory" method="POST">
+    <label for="genre" class="inputData">Genre:</label>
+    <input style="font-size: 110%" type="text" id="genre" name="genre" pattern="^[a-zA-Z]+$" required>
+    <br><br><br>
+    <label for="platform" class="inputData">Platform:</label>
+    <input style="font-size: 110%" type="text" id="platform" name="platform" required>
+    <br><br><br>
+    <button style="font-size: 120%; color:black;" type="submit">Add Category</button>
+  </form>
+    </div>
+    
+<br><br><br>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        Transactions
+    </title>
+</head>
+
+<body>
+    <a href="VideoGames"><button class="tablink">Video Games</button></a>
+    <a href="Categories"><button class="tablink">Categories</button></a>
+    <a href="Developers"><button class="tablink">Developers</button></a>
+    <a href="Clients"><button class="tablink">Clients</button></a>  
+    <a href="Transactions"><button class="tablink">Transactions</button></a>
+    <a href="addTransaction"><button class="addBTN">Add a transaction</button></a>
+    <a href="delTransaction"><button class="delBTN">Delete a transaction</button></a>
+     
+
+    <br><br><br><br><br>
+    <table style="width:70%", class="center">
+        <tr>
+          <th>Transaction_ID</th>
+          <th>Date</th> 
+          <th>Product_id</th>
+          <th>Client_id</th>
+        </tr>
+  {% for transaction in transactions %}
+        <tr>
+          <td>{{transaction["transaction_id"]}}</td>
+          <td>{{transaction["transaction_date"]}}</td> 
+          <td>{{transaction["product_id"]}}</td>
+          <td>{{transaction["client_id"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<br><br><br>
+</body>
+</html>

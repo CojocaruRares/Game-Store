@@ -1,0 +1,113 @@
+body{
+    height: 100%;
+    margin: 0%;
+    background-color: rgb(19, 18, 18);
+}
+
+.tablink{
+    font-weight: bold;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(7, 56, 112);
+    color: azure;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 17px;
+    font-size: 22px;
+    width: 20%;
+}
+.tablink:hover{
+    background-color: rgb(48, 180, 167);
+}
+
+.tabcontent {
+    color: white;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-color: white;
+    text-align: center;
+    
+}
+
+td{
+    padding: 15px;
+    color:antiquewhite;
+}
+
+th {
+    padding: 20px;
+    color:rgb(250, 224, 190);
+}
+table.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addBTN {
+    font-weight: bold;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(67, 134, 209);
+    color: azure;
+    top: 10%;
+    left: 2%;
+    position: absolute;
+    border:rgb(250, 224, 190);
+    outline:auto;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 15px;
+    width: 10%;
+}
+
+.delBTN {
+    font-weight: bold;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(67, 134, 209);
+    color: azure;
+    top: 20%;
+    left: 2%;
+    position: absolute;
+    border:rgb(250, 224, 190);
+    outline:auto;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 15px;
+    width: 10%;
+}
+
+.updateBTN {
+    font-weight: bold;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(67, 134, 209);
+    color: azure;
+    top: 30%;
+    left: 2%;
+    position: absolute;
+    border:rgb(250, 224, 190);
+    outline:auto;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 15px;
+    width: 10%;
+}
+
+.addBTN:hover,.delBTN:hover,.updateBTN:hover{
+    background-color: black;
+}
+
+.inputData{
+    font-weight:bolder;
+	font-family: monospace;
+    color:rgb(247, 217, 177);
+    font-size: 30px;
+}
+.center {
+    text-align: center;
+  }
+

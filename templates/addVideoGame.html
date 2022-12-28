@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        Add Product
+    </title>
+</head>
+
+<body>
+    <a href="VideoGames"><button class="tablink">Video Games</button></a>
+    <a href="Categories"><button class="tablink">Categories</button></a>
+    <a href="Developers"><button class="tablink">Developers</button></a>
+    <a href="Clients"><button class="tablink">Clients</button></a>  
+    <a href="Transactions"><button class="tablink">Transactions</button></a>
+    
+
+    <br><br><br><br><br><br><br><br>
+    <div class="center">
+    <form action="/addVideoGame" method="POST">
+    <label for="name" class="inputData">Name:</label>
+    <input style="font-size: 110%" type="text" id="name" name="name" required>
+    <br><br><br>
+    <label for="price" class="inputData">Price:</label>
+    <input style="font-size: 110%" type="number" id="price" name="price"  placeholder="ex. 40.50" step="0.01" required>
+    <br><br><br>
+    <label for="Developer_ID" class="inputData">Developer ID:</label>
+    <input style="font-size: 110%" type="number" id="Developer_ID" name="Developer_ID" min="1" max="999" placeholder="ex. 1" required>
+    <br><br><br>
+    <label for="Category_ID" class="inputData">Category ID:</label>
+    <input style="font-size: 110%" type="number" id="Category_ID" name="Category_ID" min="1" max="999" placeholder="ex. 1" required>
+    <br><br><br>
+    <button style="font-size: 120%; color:black;" type="submit">Add product</button>
+  </form>
+    </div>
+    
+<br><br><br>
+</body>
+</html>

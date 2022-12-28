@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        VideoGames
+    </title>
+</head>
+
+<body>
+  <a href="VideoGames"><button class="tablink">Video Games</button></a>
+  <a href="Categories"><button class="tablink">Categories</button></a>
+  <a href="Developers"><button class="tablink">Developers</button></a>
+  <a href="Clients"><button class="tablink">Clients</button></a>  
+  <a href="Transactions"><button class="tablink">Transactions</button></a>
+  <a href="addVideoGame"><button class="addBTN">Add  product</button></a>
+  <a href="delVideoGame"><button class="delBTN">Delete product</button></a>
+  <a href="updateVideoGame"><button class="updateBTN">Update product</button></a>  
+
+    <br><br><br><br><br>
+    <table style="width:70%", class="center">
+        <tr>
+          <th>Product_ID</th>
+          <th>Name</th> 
+          <th>Genre</th>
+          <th>Platform</th>
+          <th>Developer</th>
+          <th>Price</th>
+        </tr>
+  {% for game in games %}
+        <tr>
+          <td>{{game["product_id"]}}</td>
+          <td>{{game["product_name"]}}</td> 
+          <td>{{game["genre"]}}</td>
+          <td>{{game["platform"]}}</td>
+          <td>{{game["developer"]}}</td>
+          <td>{{game["price"]}}{{' RON'}}</td>   
+        </tr>
+        {% endfor %}
+    </table>
+<br><br><br>
+</body>
+</html>

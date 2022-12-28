@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        Add Transaction
+    </title>
+</head>
+
+<body>
+    <a href="VideoGames"><button class="tablink">Video Games</button></a>
+    <a href="Categories"><button class="tablink">Categories</button></a>
+    <a href="Developers"><button class="tablink">Developers</button></a>
+    <a href="Clients"><button class="tablink">Clients</button></a>  
+    <a href="Transactions"><button class="tablink">Transactions</button></a>
+    
+
+    <br><br><br><br><br><br><br><br>
+    <div class="center">
+    <form action="/addTransaction" method="POST">
+    <label for="T_Date" class="inputData">Transaction Date:</label>
+    <input style="font-size: 110%" type="text" id="T_Date" name="T_Date" placeholder="ex. 27.11.2022" required>
+    <br><br><br>
+    <label for="Client_Id" class="inputData">Client Id:</label>
+    <input style="font-size: 100%" type="number" id="Client_Id" name="Client_Id" min="1" max="99" placeholder="ex. 1" required>
+    <br><br><br>
+    <label for="Product_Id" class="inputData">Product Id:</label>
+    <input style="font-size: 100%" type="number" id="Product_Id" name="Product_Id" min="1" max="99" placeholder="ex. 1" required>
+    <br><br><br>
+    <button style="font-size: 120%; color:black;" type="submit">Submit Transaction</button>
+  </form>
+    </div>
+    
+<br><br><br>
+</body>
+</html>

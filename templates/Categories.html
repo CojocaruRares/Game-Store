@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        Categories
+    </title>
+</head>
+
+<body>
+    <a href="VideoGames"><button class="tablink">Video Games</button></a>
+    <a href="Categories"><button class="tablink">Categories</button></a>
+    <a href="Developers"><button class="tablink">Developers</button></a>
+    <a href="Clients"><button class="tablink">Clients</button></a>  
+    <a href="Transactions"><button class="tablink">Transactions</button></a>
+    <a href="addCategory"><button class="addBTN">Add a category</button></a>
+    <a href="delCategory"><button class="delBTN">Delete a category</button></a>
+    <a href="updateCategory"><button class="updateBTN">Update category</button></a>  
+
+    <br><br><br><br><br>
+    <table style="width:70%", class="center">
+        <tr>
+          <th>Category_ID</th>
+          <th>Genre</th> 
+          <th>Platform</th>
+        </tr>
+  {% for category in categories %}
+        <tr>
+          <td>{{category["category_id"]}}</td>
+          <td>{{category["genre"]}}</td> 
+          <td>{{category["platform"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<br><br><br>
+</body>
+</html>

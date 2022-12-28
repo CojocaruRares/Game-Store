@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+        Clients
+    </title>
+</head>
+
+<body>
+    <a href="VideoGames"><button class="tablink">Video Games</button></a>
+    <a href="Categories"><button class="tablink">Categories</button></a>
+    <a href="Developers"><button class="tablink">Developers</button></a>
+    <a href="Clients"><button class="tablink">Clients</button></a>  
+    <a href="Transactions"><button class="tablink">Transactions</button></a>
+    <a href="addClient"><button class="addBTN">Add a client</button></a>
+    <a href="delClient"><button class="delBTN">Delete a client</button></a>
+    <a href="updateClient"><button class="updateBTN">Update client</button></a>  
+
+    <br><br><br><br><br>
+    <table style="width:70%", class="center">
+        <tr>
+          <th>Client_ID</th>
+          <th>First Name</th> 
+          <th>Last Name</th>
+          <th>Email address</th>
+          <th>Phone number</th>
+          <th>Wallet</th>
+        </tr>
+  {% for client in clients %}
+        <tr>
+          <td>{{client["client_id"]}}</td>
+          <td>{{client["first_name"]}}</td> 
+          <td>{{client["last_name"]}}</td>
+          <td>{{client["email"]}}</td>
+          <td>{{client["phone"]}}</td>
+          <td>{{client["wallet"]}}{{' RON'}}</td> 
+        </tr>
+        {% endfor %}
+    </table>
+<br><br><br>
+</body>
+</html>
